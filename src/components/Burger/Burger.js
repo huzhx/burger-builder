@@ -5,7 +5,11 @@ import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const Burger = ({ ingredients }) => {
   const ingredientsArr = Object.keys(ingredients).map((key) => {
-    return [...Array(ingredients[key])].map((_, i) => <BurgerIngredient key={key + i} type={key} />);
+    return [...Array(ingredients[key])]
+      .map((_, i) => <BurgerIngredient key={key + i} type={key} />)
+      .reduce((arr, el) => {
+        return [...arr, el];
+      }, []);
   });
   return (
     <div className={styles.burger}>
