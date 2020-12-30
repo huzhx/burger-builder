@@ -1,6 +1,6 @@
 .build_controls {
   width: 100%;
-  background-color: #cf8f2e;
+  background-color: var(--primary-color-light);
   display: flex;
   flex-flow: column;
   align-items: center;
