@@ -1,6 +1,19 @@
+:root {
+  box-sizing: border-box;
+  --main-font: 'Open Sans', sans-serif;
+  --primary-color: #703b09;
+  --primary-color-light: #cf8f2e;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--main-font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
